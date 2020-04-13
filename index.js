@@ -53,6 +53,10 @@ class Person {
       return this.stomach.push(food); 
     }
   }
+  poop(){
+    this.stomach = []; 
+  }
+
     
 }
 
@@ -73,6 +77,9 @@ console.log(sarah.stomach);
 
 sarah.eat("chocolate cake");
 console.log(sarah.stomach.length);
+
+sarah.poop();
+console.log(sarah.stomach);
 
 /*
   TASK 2
