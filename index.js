@@ -45,18 +45,34 @@ class Person {
     this.name = name;
     this.age = age;
     this.stomach = [];
-  }
+  } 
   eat(food){
-    this.eatEdible = this.stomach.push(food); 
+    //this.stomach = this.stomach.push(food); 
+
+    if(this.stomach.length < 10){
+      return this.stomach.push(food); 
+    }
   }
+    
 }
 
 const sarah = new Person('Sarah', 30);
 
 console.log(sarah);
 sarah.eat("banana");
+sarah.eat("mango");
+sarah.eat("cake");
+sarah.eat("ice candy");
+sarah.eat("peaches");
+sarah.eat("berries");
+sarah.eat("durian");
+sarah.eat("leche flan");
+sarah.eat("lava cake");
+sarah.eat("mango float");
 console.log(sarah.stomach);
 
+sarah.eat("chocolate cake");
+console.log(sarah.stomach.length);
 
 /*
   TASK 2
