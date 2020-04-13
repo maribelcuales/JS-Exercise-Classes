@@ -56,8 +56,9 @@ class Person {
   poop(){
     this.stomach = []; 
   }
-
-    
+  toString(){
+    return `${this.name}, ${this.age}`;
+  }
 }
 
 const sarah = new Person('Sarah', 30);
@@ -80,6 +81,7 @@ console.log(sarah.stomach.length);
 
 sarah.poop();
 console.log(sarah.stomach);
+console.log(sarah.toString());
 
 /*
   TASK 2
