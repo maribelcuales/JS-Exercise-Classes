@@ -157,7 +157,19 @@ class Lambdasian {
     this.age = attrs.age;
     this.location = attrs.location; 
   }
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}.`
+  }
 }
+
+const jetLee = new Lambdasian({
+  name: 'Jet Lee',
+  age: 40,
+  location: 'Hong Kong'
+})
+
+console.log(jetLee);
+console.log(jetLee.speak()); 
 
 
 /*
