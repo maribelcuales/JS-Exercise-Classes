@@ -196,6 +196,9 @@ class Instructor extends Lambdasian{
   demo(subject){
     return `Today we are learning about ${subject}.`
   }
+  grade(student, subject){
+    return `${student.name} receives a perfect score on ${subject}.`
+  }
 }
 
 const mark = new Instructor({
@@ -210,6 +213,12 @@ const mark = new Instructor({
 console.log(mark);
 console.log(mark.speak()); 
 console.log(mark.demo('django')); 
+
+const student = {
+  name: 'Bruce Lee'
+}
+
+console.log(mark.grade(student, 'python'));
 
 
 
