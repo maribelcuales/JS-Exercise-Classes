@@ -248,7 +248,10 @@ class Student extends Lambdasian{
     return `Loving ${this.favSubjects}!`;
   }
   PRAssignment(subject){
-    return `${this.name} has submitted a PR for ${subject}.`
+    return `${this.name} has submitted a PR for ${subject}.`;
+  }
+  sprintChallenge(subject){
+    return `${this.name} has begun sprint challenge on ${subject}.`; 
   }
 }
 
@@ -265,6 +268,7 @@ console.log(bella);
 console.log(bella.speak());
 console.log(bella.listSubjects());
 console.log(bella.PRAssignment('React'));
+console.log(bella.sprintChallenge('Redux'));
 
 
 /*
