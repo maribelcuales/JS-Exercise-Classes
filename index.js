@@ -115,7 +115,8 @@ class Car {
       
       // cause the tank to go down
       const driveMiles = distance / this.milesPerGallon;
-      this.tank = this.tank - driveMiles; 
+      this.tank = this.tank - driveMiles;
+      // when car runs out of fuel 
     } else {
       this.odometer = this.odometer + maxDistance;
       this.tank = 0;
@@ -151,8 +152,13 @@ console.log(bmw);
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  constructor(attrs){
+    this.name = attrs.name;
+    this.age = attrs.age;
+    this.location = attrs.location; 
+  }
 }
+
 
 /*
   TASK 4
