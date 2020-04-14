@@ -193,7 +193,24 @@ class Instructor extends Lambdasian{
     this.favLanguage = attributes.favLanguage;
     this.catchPhrase = attributes.catchPhrase;   
   }
+  demo(subject){
+    return `Today we are learning about ${subject}.`
+  }
 }
+
+const mark = new Instructor({
+  name: 'Mark Chen',
+  age: 30,
+  location: 'California',
+  specialty: 'Computer Science',
+  favLanguage: 'Python',
+  cathPhrase: 'Wazzup!'
+})
+
+console.log(mark);
+console.log(mark.speak()); 
+console.log(mark.demo('django')); 
+
 
 
 /*
