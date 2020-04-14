@@ -313,6 +313,12 @@ console.log(brit.demo('DOM'));
 console.log(brit.grade(student, 'DOM'));
 console.log(brit.standUp('React'));
 
+const student2 = {
+  name: 'Jackie Chan',
+}
+
+console.log(brit.debugsCode(student2, 'DOM')); 
+
 
 /*
   STRETCH PROBLEM (no tests!)
