@@ -207,7 +207,7 @@ const mark = new Instructor({
   location: 'California',
   specialty: 'Computer Science',
   favLanguage: 'Python',
-  cathPhrase: 'Wazzup!'
+  catchPhrase: 'Wazzup!'
 })
 
 console.log(mark);
@@ -289,6 +289,9 @@ class ProjectManager extends Instructor{
     super(attributes)
     this.gradClassName = attributes.gradClassName;
     this.favInstructor = attributes.favInstructor; 
+  }
+  standUp(channel){
+    return `${this.name} announces to ${channel}, @channel standy times!`
   }
 
 }
