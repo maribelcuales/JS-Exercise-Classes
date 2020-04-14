@@ -247,6 +247,9 @@ class Student extends Lambdasian{
   listSubjects(){
     return `Loving ${this.favSubjects}!`;
   }
+  PRAssignment(subject){
+    return `${this.name} has submitted a PR for ${subject}.`
+  }
 }
 
 const bella = new Student({
@@ -260,7 +263,8 @@ const bella = new Student({
 
 console.log(bella);
 console.log(bella.speak());
-console.log(bella.listSubjects()); 
+console.log(bella.listSubjects());
+console.log(bella.PRAssignment('React'));
 
 
 /*
