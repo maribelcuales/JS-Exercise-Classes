@@ -244,8 +244,24 @@ class Student extends Lambdasian{
     this.className = attributes.className; 
     this.favSubjects = attributes.favSubjects;
   }
-
+  listSubjects(){
+    return `Loving ${this.favSubjects}!`;
+  }
 }
+
+const bella = new Student({
+  name: 'Bella',
+  age: 25,
+  location: 'Florida',
+  previousBackground: 'bookkeeper',
+  className: 'CS17',
+  favSubjects: ['HTML', 'CSS', 'JS']
+})
+
+console.log(bella);
+console.log(bella.speak());
+console.log(bella.listSubjects()); 
+
 
 /*
   TASK 6
