@@ -237,7 +237,13 @@ console.log(mark.grade(student, 'python'));
         + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
-class Student {
+class Student extends Lambdasian{
+  constructor(attributes){
+    super(attributes)
+    this.previousBackground = attributes.previousBackground;
+    this.className = attributes.className; 
+    this.favSubjects = attributes.favSubjects;
+  }
 
 }
 
