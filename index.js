@@ -104,7 +104,17 @@ class Car {
     this.tank = 0;
     this.odometer = 0; 
   }
+  fill(gallons){
+    this.tank = this.tank + gallons;
+  }
 }
+
+const bmw = new Car('BMW', 20); 
+
+console.log(bmw);
+bmw.fill(10); 
+console.log(bmw);
+
 
 /*
   TASK 3
