@@ -236,6 +236,9 @@ console.log(mark.grade(student, 'python'));
         + `listSubjects` a method that returns all of the student's favSubjects in a single string: `Loving HTML, CSS, JS!`.
         + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
+    
+    // STRETCH # 1
+    - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
 */
 class Student extends Lambdasian{
   constructor(attributes){
@@ -243,6 +246,9 @@ class Student extends Lambdasian{
     this.previousBackground = attributes.previousBackground;
     this.className = attributes.className; 
     this.favSubjects = attributes.favSubjects;
+
+    //STRETCH
+    this.grade = attributes.grade; 
   }
   listSubjects(){
     return `Loving ${this.favSubjects}!`;
@@ -261,7 +267,8 @@ const bella = new Student({
   location: 'Florida',
   previousBackground: 'bookkeeper',
   className: 'CS17',
-  favSubjects: ['HTML', 'CSS', 'JS']
+  favSubjects: ['HTML', 'CSS', 'JS'],
+  grade: 95
 })
 
 console.log(bella);
@@ -328,6 +335,8 @@ console.log(brit.debugsCode(student2, 'DOM'));
       + This method, when called, will check the grade of the student and see if they're ready to graduate from Lambda School
       + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
 */
+
+
 
 ///////// END OF CHALLENGE /////////
 ///////// END OF CHALLENGE /////////
