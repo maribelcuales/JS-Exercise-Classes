@@ -185,6 +185,9 @@ console.log(jetLee.speak());
     - Instructor instances have the following methods:
         + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
+
+    // STRETCH # 2
+    - Now that our students have a grade build out a method on the Instructor (this will be used by _BOTH_ instructors and PM's) that will randomly add or subtract points to a student's grade. _Math.random_ will help.
 */
 class Instructor extends Lambdasian{
   constructor(attributes){
@@ -198,6 +201,11 @@ class Instructor extends Lambdasian{
   }
   grade(student, subject){
     return `${student.name} receives a perfect score on ${subject}.`
+  }
+
+  // STRETCH
+  randomPoints(student){
+    return student.grade + Math.floor(Math.random() * 101) || student.grade - Math.floor(Math.random() * 101);
   }
 }
 
@@ -215,10 +223,12 @@ console.log(mark.speak());
 console.log(mark.demo('django')); 
 
 const student = {
-  name: 'Bruce Lee'
+  name: 'Bruce Lee',
+  grade: 75
 }
 
 console.log(mark.grade(student, 'python'));
+console.log(mark.randomPoints(student));
 
 
 
@@ -247,7 +257,7 @@ class Student extends Lambdasian{
     this.className = attributes.className; 
     this.favSubjects = attributes.favSubjects;
 
-    //STRETCH
+    //STRETCH # 1
     this.grade = attributes.grade; 
   }
   listSubjects(){
@@ -268,7 +278,7 @@ const bella = new Student({
   previousBackground: 'bookkeeper',
   className: 'CS17',
   favSubjects: ['HTML', 'CSS', 'JS'],
-  grade: 95
+  grade: 80
 })
 
 console.log(bella);
@@ -276,6 +286,8 @@ console.log(bella.speak());
 console.log(bella.listSubjects());
 console.log(bella.PRAssignment('React'));
 console.log(bella.sprintChallenge('Redux'));
+
+console.log(mark.randomPoints(bella));  // invoke instructor  method on bella 
 
 
 /*
