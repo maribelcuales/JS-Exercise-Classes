@@ -203,7 +203,7 @@ class Instructor extends Lambdasian{
     return `${student.name} receives a perfect score on ${subject}.`
   }
 
-  // STRETCH
+  // STRETCH # 2
   randomPoints(student){
     return student.grade + Math.floor(Math.random() * 101) || student.grade - Math.floor(Math.random() * 101);
   }
@@ -249,6 +249,11 @@ console.log(mark.randomPoints(student));
     
     // STRETCH # 1
     - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
+
+    // STRETCH # 3 
+    - Add a graduate method to a student.
+      + This method, when called, will check the grade of the student and see if they're ready to graduate from Lambda School
+      + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
 */
 class Student extends Lambdasian{
   constructor(attributes){
@@ -269,6 +274,15 @@ class Student extends Lambdasian{
   sprintChallenge(subject){
     return `${this.name} has begun sprint challenge on ${subject}.`; 
   }
+
+  // STRETCH # 3 
+  graduate(){
+    if(grade > 70){
+      return `Congratulations, ${this.name}, for graduating with a grade of ${this.grade} from Lambda School!`
+    } else {
+      return `You're almost there, ${this.name}! You can do this!`
+    }
+  }
 }
 
 const bella = new Student({
@@ -288,6 +302,7 @@ console.log(bella.PRAssignment('React'));
 console.log(bella.sprintChallenge('Redux'));
 
 console.log(mark.randomPoints(bella));  // invoke instructor  method on bella 
+console.log(bella.graduate());
 
 
 /*
